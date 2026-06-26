@@ -12,6 +12,9 @@ import { Jars } from './components/Jars';
 import { Automation } from './components/Automation';
 import { Intelligence } from './components/Intelligence';
 import { FreedomCalculator } from './components/FreedomCalculator';
+import { InvoiceScanner } from './components/InvoiceScanner';
+import { ZenPomodoro } from './components/ZenPomodoro';
+import { DebtSnowball } from './components/DebtSnowball';
 
 interface Profile {
   nickname: string;
@@ -48,6 +51,8 @@ interface FinancialData {
   transactions: Transaction[];
   profile?: Profile;
   recurringRules?: RecurringRule[];
+  zenPoints?: number;
+  debts?: any[];
 }
 
 export default function App() {
@@ -56,7 +61,7 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState<string | null>(null);
 
   // Dashboard Left Sidebar Navigation View state
-  const [activeView, setActiveView] = useState<'overview' | 'ledger' | 'jars' | 'automation' | 'intelligence' | 'calculator'>('overview');
+  const [activeView, setActiveView] = useState<'overview' | 'ledger' | 'scanner' | 'jars' | 'automation' | 'intelligence' | 'pomodoro' | 'debts' | 'calculator'>('overview');
 
   // Automated recurring rule active toggles
   const [disabledRuleIds, setDisabledRuleIds] = useState<string[]>(() => {
@@ -1293,6 +1298,32 @@ export default function App() {
                   intelligenceLoading={intelligenceLoading}
                   intelligenceData={intelligenceData}
                   fetchIntelligence={fetchIntelligence}
+                />
+              )}
+
+              {activeView === 'scanner' && (
+                <InvoiceScanner
+                  formatCurrency={formatCurrency}
+                  getHeaders={getHeaders}
+                  setStatusMessage={setStatusMessage}
+                  setData={setData}
+                />
+              )}
+
+              {activeView === 'pomodoro' && (
+                <ZenPomodoro
+                  getHeaders={getHeaders}
+                  setStatusMessage={setStatusMessage}
+                />
+              )}
+
+              {activeView === 'debts' && (
+                <DebtSnowball
+                  formatCurrency={formatCurrency}
+                  getHeaders={getHeaders}
+                  setStatusMessage={setStatusMessage}
+                  setData={setData}
+                  data={data}
                 />
               )}
 

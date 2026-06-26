@@ -36,13 +36,15 @@ interface FinancialData {
   transactions: Transaction[];
   profile: Profile;
   recurringRules: RecurringRule[];
+  zenPoints?: number;
+  debts?: any[];
 }
 
 interface SidebarProps {
   currentUser: string | null;
   data: FinancialData;
-  activeView: 'overview' | 'ledger' | 'jars' | 'automation' | 'intelligence' | 'calculator';
-  setActiveView: (view: 'overview' | 'ledger' | 'jars' | 'automation' | 'intelligence' | 'calculator') => void;
+  activeView: 'overview' | 'ledger' | 'scanner' | 'jars' | 'automation' | 'intelligence' | 'pomodoro' | 'debts' | 'calculator';
+  setActiveView: (view: 'overview' | 'ledger' | 'scanner' | 'jars' | 'automation' | 'intelligence' | 'pomodoro' | 'debts' | 'calculator') => void;
   handleSignOut: () => void;
   isEditingProfile: boolean;
   setIsEditingProfile: (val: boolean) => void;
@@ -74,12 +76,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
   submitting,
 }) => {
   const menuItems = [
-    { id: 'overview', label: 'Overview & Balance', icon: '✦' },
-    { id: 'ledger', label: 'Visual Ledger', icon: '✿' },
-    { id: 'jars', label: 'Jars Designer', icon: '❦' },
-    { id: 'automation', label: 'Recurring Automation', icon: '❧' },
-    { id: 'intelligence', label: 'Gemini Intelligence', icon: '✨' },
-    { id: 'calculator', label: 'Freedom Calculator', icon: '🧮' },
+    { id: 'overview', label: 'Book 01: Overview & Portfolio', icon: '✦' },
+    { id: 'ledger', label: 'Book 02: Visual Ledger', icon: '✿' },
+    { id: 'scanner', label: 'Book 03: Invoice AI Scanner', icon: '✂' },
+    { id: 'jars', label: 'Book 04: Jars Designer', icon: '❦' },
+    { id: 'automation', label: 'Book 05: Automation Sandbox', icon: '❧' },
+    { id: 'intelligence', label: 'Book 06: Gemini Intelligence', icon: '✨' },
+    { id: 'pomodoro', label: 'Book 07: Zen Pomodoro', icon: '☯' },
+    { id: 'debts', label: 'Book 08: Debt Snowball', icon: '⚖' },
+    { id: 'calculator', label: 'Book 09: Freedom Calculator', icon: '🧮' },
   ] as const;
 
   const currentAvatar = data.profile?.avatarUrl || 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=150';
