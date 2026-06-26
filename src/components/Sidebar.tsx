@@ -87,7 +87,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const currentBio = data.profile?.bio || 'Quietly writing down where life flows.';
 
   return (
-    <aside className="w-full md:w-[25vw] h-auto md:h-screen bg-[#E2EAE0] px-6 py-8 border-r border-[#2D3B32]/10 md:sticky md:top-0 flex flex-col justify-between" id="dashboard-sidebar">
+    <aside className="w-full md:w-[300px] md:min-h-screen flex flex-col justify-between bg-[#E2EAE0] p-6 border-b md:border-b-0 md:border-r border-[#2D3B32]/10 shrink-0" id="dashboard-sidebar">
       <div className="space-y-6">
         {/* Branding Logo */}
         <div className="space-y-1">

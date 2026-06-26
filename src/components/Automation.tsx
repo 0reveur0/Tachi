@@ -198,7 +198,7 @@ export const Automation: React.FC<AutomationProps> = ({
         </div>
 
         {/* Right Column: Active scheduler manager indices */}
-        <div className="lg:col-span-7 bg-[#FAF7F0] border border-[#2D3B32]/12 p-6 rounded-xl space-y-6 shadow-xs max-h-screen overflow-y-auto">
+        <div className="lg:col-span-7 bg-[#FAF7F0] border border-[#2D3B32]/12 p-6 rounded-xl space-y-6 shadow-xs h-auto min-h-[300px] overflow-y-auto pb-6">
           <div className="border-b border-[#2D3B32]/10 pb-2">
             <h4 className="text-xs uppercase font-bold tracking-widest text-[#2D3B32]">Active Scheduler Rules</h4>
             <p className="text-[10px] text-[#2D3B32]/50 italic leading-none font-serif mt-0.5">Automated events checked once daily</p>

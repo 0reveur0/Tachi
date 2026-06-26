@@ -187,7 +187,7 @@ export const Jars: React.FC<JarsProps> = ({
             <span className="text-[9px] font-mono text-[#2D3B32]/45">[{spendingCategories.length} jars limits]</span>
           </div>
 
-          <div className="space-y-3.5 max-h-[460px] overflow-y-auto pr-1">
+          <div className="space-y-3.5 h-auto min-h-[300px] overflow-y-auto pr-1">
             {spendingCategories.map(renderCategoryCard)}
           </div>
         </div>
@@ -201,7 +201,7 @@ export const Jars: React.FC<JarsProps> = ({
             <span className="text-[9px] font-mono text-[#2D3B32]/45">[{accumulationCategories.length} growth funds]</span>
           </div>
 
-          <div className="space-y-3.5 max-h-[460px] overflow-y-auto pr-1">
+          <div className="space-y-3.5 h-auto min-h-[300px] overflow-y-auto pr-1">
             {accumulationCategories.length === 0 ? (
               <div className="py-12 bg-transparent text-center text-xs italic text-[#2D3B32]/40 p-4 border border-dashed border-[#2D3B32]/15 rounded-lg leading-relaxed font-serif">
                 Currently, no savings/investments jars exist.<br/>

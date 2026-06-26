@@ -252,7 +252,7 @@ export const Ledger: React.FC<LedgerProps> = ({
         </div>
 
         {/* Right Column (Ledger lists with search query filter & CSV features) */}
-        <div className="lg:col-span-7 bg-[#FAF7F0] border border-[#2D3B32]/12 p-6 rounded-xl space-y-6 shadow-xs max-h-screen overflow-y-auto">
+        <div className="lg:col-span-7 bg-[#FAF7F0] border border-[#2D3B32]/12 p-6 rounded-xl space-y-6 shadow-xs h-auto min-h-[300px] overflow-y-auto pb-6">
           {/* Section banner */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-[#2D3B32]/10 pb-3">
             <div>

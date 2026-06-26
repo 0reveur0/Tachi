@@ -704,13 +704,13 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen bg-[#FDFBF7] text-[#2D3B32] font-sans antialiased selection:bg-[#CCD8CB] selection:text-[#2D3B32] transition-colors duration-500 ${
+    <div className={`min-h-screen w-full overflow-x-hidden flex flex-col bg-[#FDFBF7] text-[#2D3B32] font-sans antialiased selection:bg-[#CCD8CB] selection:text-[#2D3B32] transition-colors duration-500 ${
       screen === 'landing' || screen === 'dashboard' ? 'p-0' : 'py-8 px-4 md:px-8'
     }`}>
       
       {/* -------------------- SCREEN 1: LANDING -------------------- */}
       {screen === 'landing' && (
-        <main className="h-screen w-full overflow-y-auto scroll-smooth bg-[#FDFBF7] flex flex-col" id="landing-screen">
+        <main className="min-h-screen w-full overflow-x-hidden flex flex-col bg-[#FDFBF7]" id="landing-screen">
           
           {/* Header (Sticky Navigation) */}
           <nav className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#2D3B32]/10 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
@@ -725,7 +725,7 @@ export default function App() {
             </button>
           </nav>
 
-          {/* Section 1: The Cover (Trang bìa - Chiếm trọn 100vh) */}
+          {/* Section 1: The Cover (Trang bia - Chiem tron 100vh) */}
           <section className="relative min-h-[calc(100vh-68px)] flex flex-col justify-center items-center text-center px-4 md:px-8 bg-[#FDFBF7] overflow-hidden" id="landing-cover">
             
             {/* Elegant botanical fern sticker in bottom right */}
@@ -846,7 +846,7 @@ export default function App() {
                   onClick={() => scrollToSection('landing-how-it-works')}
                   className="text-[#2D3B32]/60 hover:text-[#2D3B32] text-xs font-bold uppercase tracking-widest border-b border-[#2D3B32]/20 pb-1 transition-colors duration-200 cursor-pointer"
                 >
-                  How it works ➔
+                  How it works →
                 </button>
               </div>
 
@@ -902,7 +902,7 @@ export default function App() {
                   onClick={() => scrollToSection('landing-manifest')}
                   className="text-[#2D3B32]/60 hover:text-[#2D3B32] text-xs font-bold uppercase tracking-widest border-b border-[#2D3B32]/20 pb-1 transition-colors duration-200 cursor-pointer"
                 >
-                  Read our manifest ➔
+                  Read our manifest →
                 </button>
               </div>
 
@@ -1170,10 +1170,10 @@ export default function App() {
           />
 
           {/* Right Main content pane */}
-          <main className="w-full md:w-[75vw] h-screen overflow-y-auto bg-[#FDFBF7] p-6 md:p-12 relative flex flex-col justify-between animate-fade-in" id="dashboard-main-content">
+          <main className="flex-1 min-w-0 p-6 md:p-12 bg-[#FDFBF7] overflow-y-auto relative flex flex-col justify-between animate-fade-in" id="dashboard-main-content">
             
             {/* Elegant botanical SVG sticker placed in strategic silent corners */}
-            <div className="absolute top-10 right-10 w-48 h-48 pointer-events-none rotate-12 opacity-15 select-none text-[#2D3B32]/15">
+            <div className="absolute top-10 right-10 w-48 h-48 pointer-events-none rotate-12 opacity-15 select-none text-[#2D3B32]/15 z-0">
               <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round">
                 <path d="M 50 90 C 50 65 50 35 50 10" />
                 <path d="M 50 75 Q 35 65 30 55" />
@@ -1310,8 +1310,8 @@ export default function App() {
 
             </div>
 
-            {/* Sổ tay Footer guidelines and references (Purely offline-centric tone) */}
-            <footer className="mt-16 border-t border-[#2D3B32]/15 pt-4 text-center text-[10px] text-[#2D3B32]/40 font-mono flex flex-col sm:flex-row justify-between uppercase tracking-widest gap-2 select-none">
+            {/* So tay Footer guidelines and references (Purely offline-centric tone) */}
+            <footer className="mt-16 border-t border-[#2D3B32]/15 pt-4 text-center text-[10px] text-[#2D3B32]/40 font-mono flex flex-col sm:flex-row justify-between uppercase tracking-widest gap-2 select-none z-10">
               <span>Tachi cash flow journal</span>
               <span>est. 2026 / simple organic wabi-sabi ethics</span>
             </footer>

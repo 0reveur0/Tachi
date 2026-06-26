@@ -128,7 +128,7 @@ export const FreedomCalculator: React.FC<FreedomCalculatorProps> = ({
         </div>
 
         {/* Right Subparts: Calculation results panels and comparative table */}
-        <div className="lg:col-span-7 bg-[#FAF7F0] border border-[#2D3B32]/12 p-6 rounded-xl space-y-6 shadow-xs max-h-screen overflow-y-auto">
+        <div className="lg:col-span-7 bg-[#FAF7F0] border border-[#2D3B32]/12 p-6 rounded-xl space-y-6 shadow-xs h-auto min-h-[300px] overflow-y-auto pb-6">
           <div className="border-b border-[#2D3B32]/10 pb-2">
             <h4 className="text-xs uppercase font-bold tracking-widest text-[#2D3B32]">Time-Travel Projections • Kết Quả Phân Tích</h4>
             <p className="text-[10px] text-[#2D3B32]/50 italic leading-none font-serif mt-0.5">Compounds target costs and safe withdrawal boundaries over time</p>
@@ -172,7 +172,7 @@ export const FreedomCalculator: React.FC<FreedomCalculatorProps> = ({
               Decade Milestones • Mốc Thời Gian Thực Tế
             </h5>
 
-            <div className="overflow-x-auto">
+            <div className="w-full overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-[#2D3B32]/15 text-[9px] uppercase tracking-widest text-[#2D3B32]/60 font-mono">
