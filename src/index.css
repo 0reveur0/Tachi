@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-kraft-bg: #FDFBF7;
+  --color-kraft-card: #F9F6F0;
+  --color-kraft-border: #E8E2D5;
+  --color-sage-dark: #3C483E;
+  --color-sage-light: #8FA88B;
+  --color-sage-accent: #E5EDE4;
+  --color-sage-muted: #B8CBB6;
+}
+
+body {
+  background-color: var(--color-kraft-bg);
+  color: var(--color-sage-dark);
+  font-family: var(--font-sans);
+}
+
+/* Custom delicate handwriting or vintage aesthetics styling */
+.journal-line {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 100% 2rem;
+  line-height: 2rem;
+}
+
+/* Custom scrollbar for raw aesthetic feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-kraft-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-kraft-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sage-muted);
+}

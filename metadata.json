@@ -1,0 +1,6 @@
+{
+  "name": "Tachi",
+  "description": "A quiet, minimalist personal finance planner designed like a classic paper notebook for mindful, stress-free budget journals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
